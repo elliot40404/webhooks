@@ -27,3 +27,5 @@ netlify.toml
 .netlify
 db.json
 vercel.json
+
+.vercel
