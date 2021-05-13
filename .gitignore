@@ -26,3 +26,4 @@ pnpm-debug.log*
 netlify.toml
 .netlify
 db.json
+vercel.json

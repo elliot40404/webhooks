@@ -1,9 +1,9 @@
 const app = require('express')()
-const { json } = require('express')
+// const { json } = require('express')
 const low = require('lowdb')
-const cors = require('cors')
-app.use(json())
-app.use('*', cors())
+// const cors = require('cors')
+// app.use(json())
+// app.use('*', cors())
 // * DB
 const FileSync = require('lowdb/adapters/FileSync')
 const adapter = new FileSync('db.json')
@@ -24,8 +24,8 @@ app.get('/api/query', (req, res) => {
     res.sendStatus(200)
 })
 
-app.post('/api/db', async (req, res) => {
-    const data = await db.getState()
+app.post('/api/db', (req, res) => {
+    const data = db.getState()
     res.send(data)
 });
 
