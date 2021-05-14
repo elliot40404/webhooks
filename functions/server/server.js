@@ -12,6 +12,14 @@ app.get('/api/data', (req, res) => {
   res.send({ a: num(), b: num(), c: num() });
 });
 
+app.post('/api/db', (req, res) => {
+  res.send({ msg: 'HELLO FROM THE OTHER SIDE' });
+});
+
+app.post('/api/githook', (req, res) => {
+  
+})
+
 const handler = serverless(app)
 
 module.exports = { handler }

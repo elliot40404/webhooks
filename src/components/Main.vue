@@ -55,7 +55,7 @@ export default {
             show: false,
           },
         },
-        series: [44, 55, 41, 17, 15],
+        series: [44, 55, 41],
       },
       graph2: {
         options: {},
@@ -90,9 +90,10 @@ export default {
     };
   },
   mounted() {
-    setInterval(() => {
-      this.api();
-    }, 1000 * 30);
+    // setInterval(() => {
+    //   this.api();
+    // }, 1000 * 30);
+    this.api()
   },
   created() {
     const size = document.body.clientWidth

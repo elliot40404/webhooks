@@ -2,6 +2,14 @@
     publish="dist"
     functions="functions"
 [[redirects]]
-  from = "/api/data"
+  from = "/api/:splat"
   to = "/.netlify/functions/server/server.js"
   status = 200
+[[redirects]]
+  from = "/*"
+  to = "index.html"
+  status = 200
+[[headers]]
+  for = "/*"
+  [headers.values]
+  Access-Control-Allow-Origin = "*"

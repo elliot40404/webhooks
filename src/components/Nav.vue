@@ -2,26 +2,34 @@
   <div>
     <nav>
       <ul class="ul-one">
-        <li data-text="Dashboard">
+        <li data-text="Home">
           <router-link to="/">
             <ion-icon name="planet-outline"></ion-icon>
           </router-link>
         </li>
         <li class="menu">
           <ul class="ul-two">
-            <li data-text="Account">
-              <ion-icon name="person-circle-outline"></ion-icon>
+            <li data-text="About">
+              <router-link to="/about">
+                <ion-icon name="person-circle-outline"></ion-icon>
+              </router-link>
             </li>
-            <li data-text="Home"><ion-icon name="home-outline"></ion-icon></li>
+            <li data-text="Charts">
+              <router-link to="/dashboard">
+                <ion-icon name="stats-chart-sharp"></ion-icon>
+              </router-link>
+            </li>
             <li data-text="API">
-              <router-link to="/about"
+              <router-link to="/api"
                 ><ion-icon name="rocket-outline"></ion-icon
               ></router-link>
             </li>
           </ul>
         </li>
         <li data-text="Setings">
-          <ion-icon name="settings-outline"></ion-icon>
+          <router-link to="/settings">
+            <ion-icon name="settings-outline"></ion-icon>
+          </router-link>
         </li>
       </ul>
     </nav>
