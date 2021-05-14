@@ -1,4 +1,4 @@
-# webhook
+# vue-dash
 
 ## Project setup
 ```

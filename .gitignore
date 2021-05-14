@@ -22,10 +22,5 @@ pnpm-debug.log*
 *.sln
 *.sw?
 
-.vercel
-netlify.toml
+# Local Netlify folder
 .netlify
-db.json
-vercel.json
-
-.vercel

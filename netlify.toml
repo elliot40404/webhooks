@@ -1,0 +1,7 @@
+[build]
+    publish="dist"
+    functions="functions"
+[[redirects]]
+  from = "/api/data"
+  to = "/.netlify/functions/server/server.js"
+  status = 200
