@@ -17,5 +17,3 @@
   for = "/*"
   [headers.values]
   Access-Control-Allow-Origin = "*"
-[context.deploy-preview.environment]
-  NODE_ENV = "development"
