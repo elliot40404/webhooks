@@ -31,10 +31,10 @@ export default {
   },
   methods: {
     getPosts() {
-      fetch("/db/posts", { method: "POST" })
+      fetch("http://localhost:3000/db/fetch", { method: "POST" })
         .then((res) => res.json())
         .then((data) => {
-          this.$store.state.dispatch("updatePosts", data);
+          this.$store.dispatch("updatePosts", data);
         });
     },
   },

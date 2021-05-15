@@ -11,7 +11,7 @@
 <script>
 export default {
     name: 'Card',
-    props: [priv, author, repo, commit, time, url],
+    props: ['priv', 'author', 'repo', 'commit', 'time', 'url'],
 }
 </script>
 
