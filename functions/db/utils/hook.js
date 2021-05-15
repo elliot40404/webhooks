@@ -17,9 +17,13 @@ const git = new mongoose.Schema({
         type: String,
         required: true
     },
+    private: {
+        type: Boolean,
+        required: true
+    },
     createdAt: {
-        type: Date,
-        default: new Date().toUTCString()
+        type: String,
+        default: new Date().toDateString() + ' ' + new Date().toLocaleTimeString()
     }
 },{ collection: 'git' });
 

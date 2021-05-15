@@ -2,12 +2,7 @@
   <div>
     <h1>⚡ API PAGE</h1>
     <div class="grid">
-      <Card :priv="true"/>
-      <Card/>
       <Card :priv="false"/>
-      <Card/>
-      <Card/>
-      <Card :priv="true"/>
     </div>
   </div>
 </template>
