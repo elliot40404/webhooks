@@ -16,7 +16,7 @@ export default {
   },
   methods: {
     hello() {
-      fetch('/api/db', {"method": 'POST'})
+      fetch('/api/hello', {"method": 'POST'})
         .then(res => res.json())
           .then((data) => {this.msg = data.msg})
     }
