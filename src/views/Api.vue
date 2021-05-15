@@ -2,19 +2,43 @@
   <div>
     <h1>⚡ API PAGE</h1>
     <div class="grid">
-      <Card :priv="false"/>
+      <Card v-for="post,index in posts" 
+      :key="index"
+      :author="post.author"
+      :repo="post.repository"
+      :priv="post.private"
+      :url="post.url"
+      :commit="post.commit"
+      :time="post.createdAt" />
     </div>
   </div>
 </template>
 
 <script>
-import Card from '@/components/Card.vue'
+import Card from "@/components/Card.vue";
 export default {
-    name: 'Api',
-    components: {
-      Card
-    }
-}
+  name: "Api",
+  components: {
+    Card,
+  },
+  computed: {
+    posts() {
+      return this.$store.getters.posts;
+    },
+  },
+  created() {
+    this.getPosts();
+  },
+  methods: {
+    getPosts() {
+      fetch("/db/posts", { method: "POST" })
+        .then((res) => res.json())
+        .then((data) => {
+          this.$store.state.dispatch("updatePosts", data);
+        });
+    },
+  },
+};
 </script>
 
 <style lang="scss" scoped>

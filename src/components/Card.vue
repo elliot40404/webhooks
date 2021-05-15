@@ -1,21 +1,17 @@
 <template>
   <div :class="[priv ? 'priv' : 'card']">
-      <h3>Author</h3>
-      <img src="https://elliot.sirv.com/favicon.ico" alt="icon">
-      <h2>CARD</h2>
-      <h3>commit message</h3>
-      <h4>{{new Date().toDateString()}} {{new Date().toLocaleTimeString()}}</h4>
+      <h3>{{author}}</h3>
+      <img :src="url" alt="icon">
+      <h2>{{repo}}</h2>
+      <h3>{{commit}}</h3>
+      <h4>{{time}}</h4>
   </div>
 </template>
 
 <script>
 export default {
     name: 'Card',
-    props: {
-      priv : {
-        default: false
-      }
-    }
+    props: [priv, author, repo, commit, time, url],
 }
 </script>
 
