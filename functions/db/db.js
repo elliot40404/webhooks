@@ -6,7 +6,8 @@ app.use(express.json());
 const Git = require('./utils/hook');
 const mongoose = require('mongoose');
 //  * DB
-const uri = "mongodb+srv://elliot:8JfTTEIVNpYU80pw@cluster0.m0gkv.mongodb.net/git?retryWrites=true&w=majority"
+const uri = "mongodb://localhost/git"
+// const uri = "mongodb+srv://elliot:8JfTTEIVNpYU80pw@cluster0.m0gkv.mongodb.net/git?retryWrites=true&w=majority"
 mongoose.connect(uri, {
   useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true
 }, () => { console.log('⚡ connected to db') });
@@ -23,6 +24,11 @@ app.post('/db/githook', async (req, res) => {
   hook.private = data.repository.private
   await hook.save();
   res.sendStatus(201)
+});
+
+app.post('/db/posts', async (req, res) => {
+  const posts = await Git.find();
+  res.send(posts);
 });
 
 const handler = serverless(app)

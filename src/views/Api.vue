@@ -31,7 +31,7 @@ export default {
   },
   methods: {
     getPosts() {
-      fetch("http://localhost:3000/db/fetch", { method: "POST" })
+      fetch("/db/posts", { method: "POST" })
         .then((res) => res.json())
         .then((data) => {
           this.$store.dispatch("updatePosts", data);
