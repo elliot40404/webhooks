@@ -8,8 +8,7 @@ const mongoose = require('mongoose');
 
 //  * DB
 
-const uri = 'mongodb://localhost/git'
-// const uri = "mongodb+srv://elliot404:!!Elliot_0811!!@cluster0.vaacx.mongodb.net/git?retryWrites=true&w=majority";
+const uri = process.env.NODE_ENV === 'production' ? process.env.MONGO_URL: "mongodb://localhost/git"
 mongoose.connect(uri, {
   useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true
 }, () => { console.log('connected to db') });
