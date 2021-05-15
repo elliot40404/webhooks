@@ -21,6 +21,6 @@ const git = new mongoose.Schema({
         type: Date,
         default: Date.now
     }
-});
+},{ collection: 'git' });
 
 module.exports = mongoose.model('Git', git);
