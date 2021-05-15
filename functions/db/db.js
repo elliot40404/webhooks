@@ -6,11 +6,10 @@ const app = express();
 app.use(express.json());
 const Git = require('./utils/hook');
 const mongoose = require('mongoose');
-const { MONGO_URL } = process.env
+const MONGO = "mongodb+srv://elliot:8JfTTEIVNpYU80pw@cluster0.m0gkv.mongodb.net/git?retryWrites=true&w=majority"
 //  * DB
-
 // const uri = process.env.NODE_ENV === 'production' ? MONGO_URL: "mongodb://localhost/git"
-const uri = MONGO_URL
+const uri = MONGO
 mongoose.connect(uri, {
   useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true
 }, () => { console.log('connected to db') });
