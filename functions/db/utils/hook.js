@@ -19,7 +19,7 @@ const git = new mongoose.Schema({
     },
     createdAt: {
         type: Date,
-        default: Date.now
+        default: new Date().toUTCString()
     }
 },{ collection: 'git' });
 
