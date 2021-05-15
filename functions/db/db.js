@@ -1,14 +1,16 @@
 'use strict';
+const process = require('process')
 const express = require('express');
 const serverless = require('serverless-http');
 const app = express();
 app.use(express.json());
 const Git = require('./utils/hook');
 const mongoose = require('mongoose');
-
+const { MONGO_URL } = process.env
 //  * DB
 
-const uri = process.env.NODE_ENV === 'production' ? process.env.MONGO_URL: "mongodb://localhost/git"
+// const uri = process.env.NODE_ENV === 'production' ? MONGO_URL: "mongodb://localhost/git"
+const uri = MONGO_URL
 mongoose.connect(uri, {
   useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true
 }, () => { console.log('connected to db') });
