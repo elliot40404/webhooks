@@ -2,7 +2,7 @@
   <div>
       <h1>HOMEPAGE</h1>
       <button @click="hello">SAY HELLO</button>
-      <h3>{{msg}}</h3>
+      <h2>{{msg}}</h2>
   </div>
 </template>
 
@@ -27,8 +27,8 @@ export default {
 <style scoped lang="scss">
 button {
   margin: 50px;
-  background: rgb(71, 172, 84);
-  color: #ffffff;
+  background: #C4EF49;
+  color: #000000;
   padding: 10px 25px;
   font-size: 20px;
   border: none;
@@ -36,7 +36,10 @@ button {
   cursor: pointer;
   border-radius: 10px;
 }
-h3 {
+h1 {
+  color: white;
+}
+h2 {
   color: white;
   padding: 20px;
 }
