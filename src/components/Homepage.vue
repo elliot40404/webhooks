@@ -38,6 +38,7 @@ button {
 }
 h1 {
   color: white;
+  padding: 1em;
 }
 h2 {
   color: white;

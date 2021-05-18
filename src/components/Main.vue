@@ -79,7 +79,7 @@ export default {
               total: {
                 show: true,
                 label: "Total",
-                formatter: function (w) {
+                formatter: function(w) {
                   return 249;
                 },
               },
@@ -93,16 +93,16 @@ export default {
     // setInterval(() => {
     //   this.api();
     // }, 1000 * 30);
-    this.api()
+    this.api();
   },
   created() {
-    const size = document.body.clientWidth
-    window.addEventListener('resize', (e) => {
-      const sizem = document.body.clientWidth
+    const size = document.body.clientWidth;
+    window.addEventListener("resize", (e) => {
+      const sizem = document.body.clientWidth;
       if (Math.abs(size - sizem) > 100) {
-        window.location.replace(location.href)
+        window.location.replace(location.href);
       }
-    })
+    });
   },
   methods: {
     update(a, b, c) {
@@ -176,14 +176,21 @@ h1 {
     display: grid;
     padding: 10px;
     grid-template-columns: auto;
-    grid-auto-rows: minmax(400px,auto);
+    grid-auto-rows: minmax(400px, auto);
     gap: 20px;
   }
-  .box{
+  .box {
     min-height: 250px;
   }
 }
-@media only screen and (max-width: 769px) {
+@media only screen and (max-width: 800px) {
+  .bg {
+    background: #171721;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+  }
   .box_one {
     flex-direction: column;
     min-height: 500px;

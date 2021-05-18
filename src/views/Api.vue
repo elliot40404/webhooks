@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="main">
     <h1>⚡ API PAGE</h1>
     <div class="grid">
       <Card v-for="post,index in posts" 
