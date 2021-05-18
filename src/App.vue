@@ -30,11 +30,17 @@ body {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  .router-link-exact-active, .router-link-active {
+  .router-link-exact-active,
+  .router-link-active {
     ion-icon {
       color: #42b983;
     }
   }
   overflow-x: hidden;
+}
+@media only screen and (max-width: 800px) {
+  .route {
+    margin-left: 0;
+  }
 }
 </style>

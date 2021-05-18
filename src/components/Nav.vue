@@ -110,6 +110,30 @@ ion-icon {
   }
 }
 @media only screen and (max-width: 800px) {
-  // TODO: add mobile support
+  nav {
+        bottom: 0;
+        height: 100px;
+        width: 100vw;
+    }
+    li {
+        &:hover::after {
+            top: 0;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+    .ul-one {
+        height: 100px;
+        padding: 0;
+        flex-direction: row;
+    }
+    .menu {
+        .ul-two {
+            display: flex;
+            li {
+                margin: 0;
+            }
+        }
+    }
 }
 </style>
