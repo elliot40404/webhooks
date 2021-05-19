@@ -186,7 +186,7 @@ h1 {
 @media only screen and (max-width: 800px) {
   .bg {
     background: #171721;
-    height: 100vh;
+    height: calc(100vh - 110px);
     width: 100vw;
     display: flex;
     flex-direction: column;
@@ -194,6 +194,9 @@ h1 {
   .box_one {
     flex-direction: column;
     min-height: 500px;
+  }
+  .box_three {
+    height: 200px;
   }
 }
 </style>

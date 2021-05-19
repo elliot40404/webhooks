@@ -6,12 +6,10 @@ app.use(express.json());
 const Git = require('./utils/hook');
 const mongoose = require('mongoose');
 //  * DB
-const uri = "mongodb://localhost/git"
-// const uri = "mongodb+srv://elliot:8JfTTEIVNpYU80pw@cluster0.m0gkv.mongodb.net/git?retryWrites=true&w=majority"
+const uri = process.env.MONGO
 mongoose.connect(uri, {
   useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true
 }, () => { console.log('⚡ connected to db') });
-
 //  * routes
 
 app.post('/db/githook', async (req, res) => {

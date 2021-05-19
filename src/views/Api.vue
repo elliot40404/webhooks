@@ -51,4 +51,9 @@ h1 {
   gap: 20px;
   padding: 20px;
 }
+@media only screen and (max-width: 800px) {
+  .main {
+    height: calc(100vh - 100px);
+  }
+}
 </style>
